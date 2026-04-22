@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sense Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+    }
+
+    body {
+      background-color: #f9f8f6;
+      color: #1a1a1a;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .hero {
+      padding: 100px 40px 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: #111;
+    }
+
+    .hero p {
+      margin-top: 8px;
+      font-size: clamp(1.3rem, 2.7vw, 1.6rem);
+      color: #888;
+    }
+
+    .image-block {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .image-block-inner {
+      width: 100%;
+      height: 400px;
+      background-image: url('sense_header01.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .columns {
+      display: grid;
+      grid-template-columns: 3fr 1fr 1fr 1fr;
+      gap: 48px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 40px 120px;
+    }
+
+    .column h2 {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+      font-size: 1.35rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 8px;
+      color: #111;
+    }
+
+    .column p {
+      font-size: 0.925rem;
+      color: #444;
+    }
+
+    .column ul {
+      list-style: none;
+      font-size: 0.925rem;
+      color: #444;
+    }
+
+    .column ul li {
+      padding: 1px 0;
+    }
+
+    .column a {
+      color: #444;
+      text-decoration: none;
+      border-bottom: 1px solid #bbb;
+      transition: border-color 0.2s;
+    }
+
+    .column a:hover {
+      border-color: #1a1a1a;
+    }
+
+
+    @media (max-width: 680px) {
+      .hero {
+        padding: 72px 24px 60px;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .image-block {
+        padding: 0 24px;
+      }
+
+      .columns {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        padding: 60px 24px 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <h1>Sense Studio</h1>
+    <p>When the only constant is change</p>
+  </header>
+
+  <div class="image-block">
+    <div class="image-block-inner"></div>
+  </div>
+
+  <section class="columns">
+    <div class="column">
+      <h2>What we do</h2>
+      <p>We help organizations move with the world—rapidly but thoughtfully. We combine design-led strategy with hands-on building to create systems, tools, and content that bring clarity to chaos, and put human potential at the center of change.</p>
+    </div>
+
+    <div class="column">
+      <h2>Partners</h2>
+      <ul>
+        <li>Airbnb</li>
+        <li>IBM Japan</li>
+        <li>Apple</li>
+        <li>Kanebo</li>
+        <li>Newlab</li>
+        <li>Esalen</li>
+      </ul>
+    </div>
+
+    <div class="column">
+      <h2>Locations</h2>
+      <ul>
+        <li>Tokyo</li>
+        <li>San Francisco</li>
+        <li>London</li>
+        <li>Mexico City</li>
+      </ul>
+    </div>
+
+    <div class="column">
+      <h2>Contact</h2>
+      <p><a href="mailto:hello@sensestud.io">hello@sensestud.io</a></p>
+    </div>
+  </section>
+
+
+</body>
+</html>
