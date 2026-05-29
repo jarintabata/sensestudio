@@ -6,7 +6,7 @@
   <title>Sense Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -14,19 +14,22 @@
       padding: 0;
     }
 
-    html {
-      font-size: 16px;
-    }
+    html { font-size: 16px; }
 
     body {
       background-color: #f9f8f6;
       color: #1a1a1a;
       font-family: 'Inter', sans-serif;
       font-weight: 300;
-      line-height: 1.7;
+      line-height: 1.5;
       -webkit-font-smoothing: antialiased;
     }
 
+    p {
+      margin-bottom: 0.75em;
+    }
+
+    /* ── HERO ── */
     .hero {
       padding: 100px 40px 28px;
       max-width: 1100px;
@@ -34,8 +37,8 @@
     }
 
     .hero h1 {
-      font-family: 'DM Serif Display', serif;
-      font-weight: 400;
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
       font-size: clamp(2rem, 4vw, 3.5rem);
       letter-spacing: -0.02em;
       line-height: 1.1;
@@ -43,11 +46,15 @@
     }
 
     .hero p {
-      margin-top: 8px;
+      margin-top: 4px;
       font-size: clamp(1.3rem, 2.7vw, 1.6rem);
       color: #888;
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-weight: 400;
     }
 
+    /* ── IMAGE ── */
     .image-block {
       max-width: 1100px;
       margin: 0 auto;
@@ -60,24 +67,25 @@
       background-image: url('sense_header01.png');
       background-size: cover;
       background-position: center;
-      border-radius: 6px;
+      border-radius: 12px;
     }
 
+    /* ── MAIN COLUMNS ── */
     .columns {
       display: grid;
-      grid-template-columns: 3fr 1fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr;
       gap: 48px;
       max-width: 1100px;
       margin: 0 auto;
-      padding: 28px 40px 120px;
+      padding: 28px 40px 80px;
     }
 
     .column h2 {
-      font-family: 'DM Serif Display', serif;
+      font-family: 'Fraunces', serif;
       font-weight: 400;
       font-size: 1.35rem;
-      letter-spacing: 0.02em;
-      margin-bottom: 8px;
+      letter-spacing: 0;
+      margin-bottom: 10px;
       color: #111;
     }
 
@@ -92,9 +100,7 @@
       color: #444;
     }
 
-    .column ul li {
-      padding: 1px 0;
-    }
+    .column ul li { padding: 1px 0; }
 
     .column a {
       color: #444;
@@ -102,30 +108,112 @@
       border-bottom: 1px solid #bbb;
       transition: border-color 0.2s;
     }
+    .column a:hover { border-color: #1a1a1a; }
 
-    .column a:hover {
-      border-color: #1a1a1a;
+    /* ── DIVIDER ── */
+    .divider {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px;
+      border: none;
+      border-top: 1px solid #e4e2de;
+      display: none; /* hidden for now */
     }
 
+    /* ── HOW WE WORK ── */
+    .work-intro {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 40px 0;
+      border-bottom: 1px solid #e4e2de;
+      padding-bottom: 28px;
+    }
 
+    .work-intro p {
+      font-size: 0.925rem;
+      color: #888;
+      max-width: 560px;
+      line-height: 1.5;
+    }
+
+    .work-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px 80px;
+    }
+
+    .work {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: none; /* hidden for now */
+    }
+
+    .work-item {
+      padding: 32px 32px 32px 0;
+      border-right: 1px solid #e4e2de;
+      padding-right: 32px;
+    }
+
+    .work-item:nth-child(2),
+    .work-item:last-child {
+      padding-left: 32px;
+    }
+
+    .work-item:last-child {
+      border-right: none;
+      padding-right: 0;
+    }
+
+    .work-item .num {
+      font-size: 0.82rem;
+      letter-spacing: 0;
+      color: #888;
+      margin-bottom: 8px;
+    }
+
+    .work-item h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 400;
+      font-size: 1.15rem;
+      color: #111;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .work-item p {
+      font-size: 0.875rem;
+      color: #666;
+      line-height: 1.65;
+    }
+
+    /* ── RESPONSIVE ── */
     @media (max-width: 680px) {
-      .hero {
-        padding: 72px 24px 60px;
-      }
-
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-
-      .image-block {
-        padding: 0 24px;
-      }
-
+      .hero { padding: 72px 24px 28px; }
+      .image-block { padding: 0 24px; }
       .columns {
         grid-template-columns: 1fr;
-        gap: 48px;
-        padding: 60px 24px 80px;
+        gap: 40px;
+        padding: 28px 24px 60px;
       }
+      .divider { padding: 0 24px; }
+      .work-intro {
+        padding: 28px 24px;
+      }
+      .work-items {
+        grid-template-columns: 1fr;
+        padding: 0 24px 60px;
+      }
+      .work-item,
+      .work-item:nth-child(2),
+      .work-item:last-child {
+        border-right: none;
+        border-bottom: 1px solid #e4e2de;
+        padding: 28px 0;
+      }
+      .work-item:last-child { border-bottom: none; }
     }
   </style>
 </head>
@@ -133,7 +221,7 @@
 
   <header class="hero">
     <h1>Sense Studio</h1>
-    <p>When the only constant is change</p>
+    
   </header>
 
   <div class="image-block">
@@ -142,16 +230,17 @@
 
   <section class="columns">
     <div class="column">
-      <h2>What we do</h2>
-      <p>We help organizations move with the world—rapidly but thoughtfully. We combine design-led strategy with hands-on building to create systems, tools, and content that bring clarity to chaos, and put human potential at the center of change.</p>
+      <h2>The human side of AI</h2>
+      <p>Organizations invest in AI. Few truly adopt AI. The missing piece is seldom the technology—it's the mindset, culture, and behavior change that makes it stick.</p>
+      <p>We work with leadership teams to create and launch working pilots that build belief, develop capability, and help you unlock the value of your AI investment.</p>
     </div>
 
     <div class="column">
       <h2>Partners</h2>
       <ul>
         <li>Airbnb</li>
-        <li>IBM Japan</li>
         <li>Apple</li>
+        <li>IBM Japan</li>
         <li>Kanebo</li>
         <li>Newlab</li>
         <li>Esalen</li>
@@ -166,14 +255,35 @@
         <li>Tokyo</li>
         <li>London</li>
       </ul>
-    </div>
-
-    <div class="column">
-      <h2>Contact</h2>
+      <h2 style="margin-top: 24px;">Contact</h2>
       <p><a href="mailto:hello@sensestud.io">hello@sensestud.io</a></p>
     </div>
   </section>
 
+  <hr class="divider">
+
+  <section class="work">
+    <div class="work-intro">
+      <p>We work in three ways — separately or together. In each, we design and build working prototypes and pilots rather than recommendations, so teams develop real capability and belief, not just a plan.</p>
+    </div>
+    <div class="work-items">
+      <div class="work-item">
+        <p class="num">Align</p>
+        <h3>Executive AI Blueprint</h3>
+        <p>A focused sprint to align leadership on AI vision, governance, and highest-ROI use cases. We make the vision tangible — not just a roadmap, but a working prototype that shows what's possible.</p>
+      </div>
+      <div class="work-item">
+        <p class="num">Enable</p>
+        <h3>AI Champion Program</h3>
+        <p>Cohort-based enablement that trains internal leaders to build and run AI tools from the inside. Modeled on the systems behind Airbnb's Superhost program.</p>
+      </div>
+      <div class="work-item">
+        <p class="num">Embed</p>
+        <h3>Culture & Behavior Embedding</h3>
+        <p>Ongoing advisory to redesign incentives, rituals, and KPIs so adoption becomes self-sustaining. The goal isn't a successful pilot — it's an organization that keeps moving.</p>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
